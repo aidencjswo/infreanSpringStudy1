@@ -13,7 +13,6 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository; //이제 추상화에만 의존하고 있다.
     private final DiscountPolicy discountPolicy; //인터페이스에만 의존하도록 변경한것임. DIP를 지킨것임.
 
-    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
